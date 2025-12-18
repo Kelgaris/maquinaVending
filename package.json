@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "mongodb": "^7.0.0"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "David Priego Puga",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^39.2.6"
+  }
+}

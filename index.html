@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Vending The Gathering</title>
+</head>
+<body>
+    <div class="maquinaVending">
+        <div class="titulo">
+            <img src="./src/img/logo.png" alt="Logo de Magic The Gathering">
+        </div>
+        <div class="containerCentral">
+            <div class="containerProductos">
+                <div class="productos"></div>
+                <div class="cajonProductos">
+                     <span class="mensajeCaja">RECOGE TU PRODUCTO</span>
+                </div>
+            </div>
+            <div class="containerBotones">
+                <!-- PANTALLA -->
+                <div class="pantalla">
+                    <div class="codigoProducto">Código: <span id="codigo">---</span></div>
+                    <div class="saldo">Saldo: <span id="saldo">0.00€</span></div>
+                    <div id="mensajeTemporal"></div>
+                </div>
+
+                <!-- TECLADO DE SELECCIÓN -->
+                <div class="teclado">
+                    <div class="filaBotones">
+                        <button class="btnTecla">1</button>
+                        <button class="btnTecla">2</button>
+                        <button class="btnTecla">3</button>
+                    </div>
+                    <div class="filaBotones">
+                        <button class="btnTecla">4</button>
+                        <button class="btnTecla">5</button>
+                        <button class="btnTecla">6</button>
+                    </div>
+                    <div class="filaBotones">
+                        <button class="btnTecla">7</button>
+                        <button class="btnTecla">8</button>
+                        <button class="btnTecla">9</button>
+                    </div>
+                    <div class="filaBotones">
+                        <button class="btnTecla" id="btnCancelar">Cancelar</button>
+                        <button class="btnTecla">0</button>
+                        <button class="btnTecla" id="btnConfirmar">Confirmar</button>
+                    </div>
+                </div>
+
+                <!-- PANEL DE MONEDAS/BILLETES -->
+                <div class="panelMonedas">
+                    <button class="btnMoneda">0.05€</button>
+                    <button class="btnMoneda">0.10€</button>
+                    <button class="btnMoneda">0.20€</button>
+                    <button class="btnMoneda">0.50€</button>
+                    <button class="btnMoneda">1€</button>
+                    <button class="btnMoneda">2€</button>
+                    <button class="btnMoneda">5€</button>
+                    <button class="btnMoneda">10€</button>
+                    <button class="btnMoneda">20€</button>
+                </div>
+
+                <!--<button class="btnDevolver">Devolver €</button> -->
+                <button class="btnAdmin">Admin</button>
+            </div>
+        </div>
+        <!-- PANEL ADMINISTRADOR -->
+        <div class="modal" id="adminPanel">
+            <div class="modal-content">
+                <div class="adminHeader">
+                    <h2>Modo Administrador</h2>
+                    <button id="btnCerrarAdmin" class="close">&times;</button>
+                </div>
+            
+                <div class="adminContent">
+                    <!-- Sección Productos -->
+                    <div class="adminSeccion">
+                        <h3>Productos</h3>
+                        <div class="adminProductos" id="adminProductos"></div>
+                    </div>
+                
+                    <hr>
+                
+                    <!-- Sección Cambio -->
+                    <div class="adminSeccion">
+                        <h3>Cambio en Máquina</h3>
+                        <div class="adminCambio" id="adminCambio"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./renderer.js"></script>
+</body>
+</html>

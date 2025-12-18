@@ -1,0 +1,555 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url("../src/img/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.maquinaVending{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 900px;
+    height: 875px;
+    padding-top: 20px; 
+    background: linear-gradient(145deg, #1a001f, #0b0011);
+    border: 4px solid #2a0233;
+    border-radius: 20px;
+    box-shadow:
+        0 0 25px #6a00ff88,
+        inset 0 0 40px #000;
+}
+
+
+.titulo{
+    width: 50%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #ffffff, #e2e2e2);
+    border-radius: 15px;
+    box-shadow:
+        0 0 8px #fff,
+        0 0 25px #ffae00;
+    padding: 5px;
+}
+
+.titulo img{
+    width: 70%;
+    height: auto;
+}
+
+
+.containerCentral{
+    width: 95%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+
+.containerProductos{
+    display: flex;
+    flex-direction: column;
+    width: 56%;
+    height: 680px;
+    background: #0d0d0d;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: inset 0 0 15px #000;
+}
+
+
+.productos{
+    width: 95%;
+    height: 550px;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    box-shadow:
+        inset 0 0 20px #30004f,
+        0 0 10px #6a00ff;
+}
+
+
+.cajonProductos{
+    width: 100%;
+    height: 100px;
+    background: #111;
+    border-radius: 12px;
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+        inset 0 0 10px #000,
+        0 0 10px #6a00ff66;
+}
+
+
+.mensajeCaja{
+    font-size: 28px;
+    color: #d9a6ff;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow:
+        0 0 5px #b300ff,
+        0 0 10px #b300ff,
+        0 0 20px #b300ff,
+        0 0 40px #9000cc,
+        0 0 80px #700099;
+    animation: parpadeoNeon 2.2s infinite alternate ease-in-out;
+}
+
+@keyframes parpadeoNeon {
+    0% {
+        opacity: 0.8;
+        text-shadow:
+            0 0 4px #b300ff,
+            0 0 10px #b300ff99,
+            0 0 20px #b300ff66;
+    }
+    100% {
+        opacity: 1;
+        text-shadow:
+            0 0 6px #cc33ff,
+            0 0 15px #b300ff,
+            0 0 30px #b300ff,
+            0 0 60px #9900ff,
+            0 0 100px #660099;
+    }
+}
+
+.containerBotones{
+    width: 35%;
+    height: 100%;
+    background: linear-gradient(180deg, #1f0129, #0d0013);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow:
+        inset 0 0 20px #000,
+        0 0 10px #6a00ff66;
+}
+
+
+
+/* CONTENEDOR GENERAL */
+.containerBotones{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 35%;
+    height: 100%;
+    background: linear-gradient(180deg, #1f0129, #0d0013);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow:
+        inset 0 0 20px #000,
+        0 0 10px #6a00ff66;
+}
+
+/* PANTALLA DEL PANEL */
+.pantalla{
+    width: 90%;
+    height: 100px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    box-shadow:
+        inset 0 0 10px #6a00ff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.pantalla span, #mensajeTemporal{
+    color: #b300ff;
+    text-shadow:
+        0 0 5px #b300ff,
+        0 0 10px #9000cc;
+}
+
+#mensajeTemporal{
+    font-size: 16px;
+    margin-top: 5px;
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* TECLADO DE SELECCIÓN */
+.teclado{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.filaBotones{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.btnTecla{
+    width: 30%;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #b34dff;
+    background: linear-gradient(135deg, #6a00ff, #30004b);
+    color: #fff;
+    text-shadow: 0 0 5px #d9a6ff;
+    cursor: pointer;
+    box-shadow:
+        0 0 10px #6a00ff,
+        inset 0 0 5px #2a0030;
+    transition: 0.2s ease;
+}
+
+.btnTecla:hover{
+    background: linear-gradient(135deg, #8d00ff, #4a006d);
+    box-shadow:
+        0 0 18px #b300ff,
+        inset 0 0 10px #3a0040;
+    transform: scale(1.05);
+}
+
+.btnTecla:active{
+    transform: scale(0.97);
+}
+
+#btnCancelar, #btnConfirmar{
+    font-size: 14px;
+}
+
+/* PANEL DE MONEDAS/BILLETES */
+.panelMonedas{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.btnMoneda{
+    width: 30%;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #b34dff;
+    background: linear-gradient(135deg, #4b0082, #1a0066);
+    color: #fff;
+    text-shadow: 0 0 5px #b300ff;
+    cursor: pointer;
+    box-shadow:
+        0 0 10px #4b0082,
+        inset 0 0 5px #1a0040;
+    transition: 0.2s ease;
+    margin-bottom: 8px;
+}
+
+.btnMoneda:hover{
+    background: linear-gradient(135deg, #6a00ff, #30004b);
+    box-shadow:
+        0 0 15px #b300ff,
+        inset 0 0 8px #3a0040;
+    transform: scale(1.05);
+}
+
+.btnMoneda:active{
+    transform: scale(0.97);
+}
+
+
+.btnAdmin, .btnDevolver{
+    width: 80%;
+    padding: 12px 0;
+    margin-bottom: 5%;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #6a00ff, #30004b);
+    border: 2px solid #b34dff;
+    border-radius: 12px;
+    cursor: pointer;
+    text-shadow: 0 0 8px #d9a6ff;
+    box-shadow:
+        0 0 10px #6a00ff,
+        inset 0 0 10px #2a0030;
+    transition: 0.2s ease;
+}
+
+.btnAdmin:hover, .btnDevolver:hover{
+    background: linear-gradient(135deg, #8d00ff, #4a006d);
+    box-shadow:
+        0 0 18px #b300ff,
+        inset 0 0 15px #3a0040;
+    transform: scale(1.05);
+}
+
+
+/*PRIDUCTOS*/
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 180px;
+    gap: 5px;
+    padding: 10px;
+}
+
+.slot {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    text-shadow: 0 0 5px #b300ff;
+    height: 180px;
+    overflow: hidden;
+}
+
+.slot {
+    height: 140px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.slot-img-wrapper {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slot-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.info-linea {
+    width: 80%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.slot-codigo {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* MODAL ADMIN */
+.modal {
+    display: none; /* oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #1a001f;
+    border: 2px solid #6a00ff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    color: #fff;
+    text-align: left;
+    box-shadow:
+        0 0 20px #6a00ff88,
+        inset 0 0 30px #000;
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+
+.close {
+    color: #ff66cc;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 2px solid #b34dff;
+    background: linear-gradient(135deg, #4b0082, #1a0066);
+    text-shadow: 0 0 5px #b300ff;
+    box-shadow:
+        0 0 10px #6a00ff,
+        inset 0 0 5px #2a0030;
+    transition: 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.close:hover {
+    color: #ff99ff;
+    background: linear-gradient(135deg, #6a00ff, #30004b);
+    box-shadow:
+        0 0 18px #b300ff,
+        inset 0 0 10px #3a0040;
+    transform: scale(1.1);
+}
+
+.close:active {
+    transform: scale(0.95);
+    box-shadow:
+        0 0 12px #b300ff,
+        inset 0 0 5px #1a0040;
+}
+
+.adminContent {
+    margin-top: 15px;
+}
+
+.adminSeccion {
+    margin-bottom: 20px;
+}
+
+.adminProductos, .adminCambio {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.adminMoneda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+}
+
+.adminProducto {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+}
+
+.adminProducto > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
+.adminProducto input[type="number"] {
+    width: 80px;
+    padding: 5px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #b34dff;
+    background: linear-gradient(135deg, #4b0082, #1a0066);
+    color: #fff;
+    text-shadow: 0 0 5px #b300ff;
+    box-shadow:
+        0 0 10px #4b0082,
+        inset 0 0 5px #1a0040;
+    transition: 0.2s ease;
+    margin-right: 5px;
+}
+
+
+.adminProducto input[type="number"]:focus {
+    outline: none;
+    border-color: #ff66cc;
+    box-shadow:
+        0 0 15px #ff66cc,
+        inset 0 0 8px #990099;
+}
+
+
+.adminProducto .btnGuardarPrecio,
+.adminProducto .btnGuardarStock {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6a00ff, #30004b);
+    color: #fff;
+    text-shadow: 0 0 5px #b300ff;
+    box-shadow:
+        0 0 10px #6a00ff,
+        inset 0 0 5px #2a0030;
+    transition: 0.2s ease;
+}
+
+.adminProducto .btnGuardarPrecio:hover,
+.adminProducto .btnGuardarStock:hover {
+    background: linear-gradient(135deg, #8d00ff, #4a006d);
+    box-shadow:
+        0 0 18px #b300ff,
+        inset 0 0 10px #3a0040;
+    transform: scale(1.05);
+}
+
+.adminProducto .btnGuardarPrecio:active,
+.adminProducto .btnGuardarStock:active {
+    transform: scale(0.97);
+}
+
+
+.adminProducto button, .adminMoneda button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, #6a00ff, #30004b);
+    color: #fff;
+    text-shadow: 0 0 5px #b300ff;
+}
+
+.adminProducto button:hover, .adminMoneda button:hover {
+    background: linear-gradient(135deg, #8d00ff, #4a006d);
+}
